@@ -28,4 +28,4 @@ Includes **About & Contact pages** and **loading animation**.
 
 **Sahil Mane**  
 GitHub: [SahilMane-Dev](https://github.com/SahilMane-Dev)  
-LinkedIn: [Sahil Mane](https://linkedin.com/in/sahil-mane-794148325)
+LinkedIn: [Sahil Mane](https://linkedin.com/in/sahilmane07)
