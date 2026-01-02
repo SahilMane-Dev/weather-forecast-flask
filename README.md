@@ -1,3 +1,7 @@
+# 🌤 Weather Forecast App
+
+**Live Demo:** [https://sahilmane07.pythonanywhere.com](https://sahilmane07.pythonanywhere.com)
+
 **Tech Stack:** Python, Flask, HTML, CSS, Jinja2, Open-Meteo API
 
 ---
@@ -24,4 +28,4 @@ Includes **About & Contact pages** and **loading animation**.
 
 **Sahil Mane**  
 GitHub: [SahilMane-Dev](https://github.com/SahilMane-Dev)  
-LinkedIn: [Sahil Mane](https://linkedin.com/in/sahilmane07)
+LinkedIn: [Sahil Mane](https://linkedin.com/in/sahil-mane-794148325)
