@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='photos/bg.png') }}");
+        }
+
+        .loader {
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top: 6px solid #00c8ff;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            margin: 20px auto;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(720deg);
+            }
+
+            to {
+                transform: rotate(4turn);
+            }
+
+        }
+    </style>
+
+    <header>
+        <h1>Weather Forecast</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <div class="container"></div>
+        <center>
+            <form action="/get_weather" method="POST" class="form" onsubmit="showLoader()">
+                <label>Enter your city name here:</label> <br>
+                <input type="text" name="city" required placeholder="Enter City..."><br>
+                <button type="submit">Check weather</button><br>
+            </form>
+        </center>
+        <div id="loader" class="loader" style="display:none;"></div>
+
+        {% if weather %}
+        <div class="weather-card" id="format">
+            <h3>City: {{weather["city"]}} </h3>
+            <p>Temperature: {{weather["temp"]}}°C</p>
+            <p>Condition: {{weather["condition"]}}</p>
+            <p>Wind speed: {{weather["wind"]}} km/hr</p>
+        </div>
+        {% endif %}
+
+    </main>
+
+    <footer>
+        <p>© 2025 | Weather Forecast | Made with ❤️ by Sahil</p>
+    </footer>
+
+    <script>
+        function showLoader() {
+            document.getElementById("loader").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

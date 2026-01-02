@@ -1,0 +1,274 @@
+body {
+    background-color: #00bbf0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../photos/bg.png");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    backdrop-filter: blur(2px); /* works ONLY when there is a translucent layer */
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
+header{
+    color: black;
+    align-items: center;
+  display: flex;
+
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: rgba(255, 255, 255, 0.548);
+color: rgb(0, 0, 0);
+
+backdrop-filter: blur(10px);
+
+border-bottom: 2px solid black;
+
+
+}
+
+nav a{
+    color: black;
+    /* color: white; */
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.container{
+   margin-top: 100px;
+   text-align: center;
+   padding: 20px;
+   
+}
+
+.form{
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    background: transparent;
+    align-items: center;
+    width: 400px;
+    border-radius: 25px;
+    /* height: 100px; */
+    padding: 50px 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 10px 5px 5px black;
+
+}
+
+
+input{
+    padding: 10px;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+label{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px rgb(251, 251, 251);
+   font-size: 22px;
+}
+
+button{
+    background-color: #0078ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 700;
+    /* border: 2px solid rgb(0, 0, 0); */
+    
+
+}
+
+button:hover{
+    background-color: #005fcc;
+}
+
+.weather-card{
+    width: 300px;
+    margin: 40px auto;
+    padding:20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* background-image: url(../photos/cardbg.jpg); */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    /* backdrop-filter: blur(8px); */
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    line-height: 1.5;
+
+}
+
+
+.weather-card:hover{
+    transform: translate(-5px);
+}
+
+footer{
+    background-color: rgba(255, 255, 255, 0.548);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1px 0px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 100px;
+    border-top: 2px solid black;
+}
+
+.weather-card h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0 , 0.9);
+
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.weather-card p{
+    font-size: 1rem;
+    margin: 5px 0;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+
+#weather{
+    color: black;
+}
+
+#footer{
+    margin-top: 80px;
+}
+
+#down{
+    color: black;
+    margin-top: 90px;
+}
+#format{
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 2px 2px rgb(0, 0, 0) ;
+}
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ----------------------------- */
+/* 📱 MOBILE RESPONSIVE DESIGN  */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 18px;
+        width: 100%;
+        display: block;
+    }
+
+    /* Weather search form */
+    .form {
+        width: 90%;
+        margin: auto;
+    }
+
+    .form input {
+        width: 90%;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .form button {
+        width: 90%;
+        padding: 12px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* Weather result box */
+    .weather-card {
+        width: 90%;
+        margin: 25px auto;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    /* Contact + About cards */
+    #down, #weather {
+        width: 90%;
+        margin: 25px auto;
+        padding: 20px;
+    }
+
+    /* Footer fixed issue on mobile */
+    footer {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    /* Mobile loader */
+    .loader {
+        width: 40px;
+        height: 40px;
+        border-width: 5px;
+    }
+}
+

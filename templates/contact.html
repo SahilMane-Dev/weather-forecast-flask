@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - Weather Forecast</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<style>
+    body {
+        background-image: url("{{ url_for('static', filename='photos/bg.png') }}");
+    }
+
+    .contact-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        padding: 20px;
+
+        .weather-card a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+
+
+
+
+        .weather-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-icon {
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            color: #001d3d;
+            text-shadow: 0px 1px 2px white;
+
+        }
+
+        h2 {
+            color: #001d3d;
+            text-decoration: underline;
+
+        }
+
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Weather Forecast</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-center">
+
+        <div class="weather-card contact-card">
+
+            <h2>📬 Contact Me</h2>
+
+            <p>
+                <span class="contact-icon">📧</span>
+                Email:
+                <a href="mailto:psyhilmane@gmail.com">psyhilmane@gmail.com</a>
+            </p>
+
+            <p>
+                <span class="contact-icon">🐱</span>
+                GitHub:
+                <a href="https://github.com/SahilMane-Dev" target="_blank">
+                    github.com/SahilMane-Dev
+                </a>
+            </p>
+
+            <p>
+                <span class="contact-icon">💼</span>
+                LinkedIn:
+                <a href="https://linkedin.com/in/sahilmane07" target="_blank">
+                    linkedin.com/in/sahil-mane-794148325
+                </a>
+            </p>
+
+            <p style="margin-top: 10px;">
+                Feel free to reach out for feedback or collaboration!
+            </p>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2025 | Weather Forecast | Made with ❤️ by Sahil</p>
+    </footer>
+
+</body>
+
+</html>
